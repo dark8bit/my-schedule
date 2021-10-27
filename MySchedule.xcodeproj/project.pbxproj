@@ -19,7 +19,7 @@
 		866D8378272813AD00C1F90D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8377272813AD00C1F90D /* ViewController.swift */; };
 		866D837B2728222800C1F90D /* EventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D837A2728222800C1F90D /* EventHelper.swift */; };
 		866D837D272823ED00C1F90D /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D837C272823ED00C1F90D /* EventDetailViewController.swift */; };
-		866D837F27283B0C00C1F90D /* EvenDetailtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D837E27283B0C00C1F90D /* EvenDetailtCell.swift */; };
+		866D8386272934B600C1F90D /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866D8385272934B600C1F90D /* EventCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		866D8377272813AD00C1F90D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		866D837A2728222800C1F90D /* EventHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHelper.swift; sourceTree = "<group>"; };
 		866D837C272823ED00C1F90D /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
-		866D837E27283B0C00C1F90D /* EvenDetailtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenDetailtCell.swift; sourceTree = "<group>"; };
+		866D8385272934B600C1F90D /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		88C07A341675553BB99A12E6 /* Pods_MySchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA25CE16A92458D5E3E2EEE /* Pods-MySchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySchedule.debug.xcconfig"; path = "Target Support Files/Pods-MySchedule/Pods-MySchedule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				866D837527280F6500C1F90D /* Event.swift */,
+				866D8385272934B600C1F90D /* EventCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				866D837327280F2100C1F90D /* EventViewCell.swift */,
-				866D837E27283B0C00C1F90D /* EvenDetailtCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 				866D83582728033D00C1F90D /* AppDelegate.swift in Sources */,
 				866D835A2728033D00C1F90D /* SceneDelegate.swift in Sources */,
 				866D837427280F2100C1F90D /* EventViewCell.swift in Sources */,
-				866D837F27283B0C00C1F90D /* EvenDetailtCell.swift in Sources */,
+				866D8386272934B600C1F90D /* EventCell.swift in Sources */,
 				866D837D272823ED00C1F90D /* EventDetailViewController.swift in Sources */,
 				866D837627280F6500C1F90D /* Event.swift in Sources */,
 			);

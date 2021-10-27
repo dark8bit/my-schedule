@@ -14,19 +14,14 @@ class EventViewCell: UITableViewCell {
     
     let eventHelper = EventHelper.shared
 
-    var event = Event()
+    var event = EventCell()
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        nameLabel.text = event.name.count > 0 ? event.name : "События нет"
-        descriprionLabel.text = event.description ?? "Пусто"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

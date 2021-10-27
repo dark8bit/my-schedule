@@ -20,4 +20,19 @@ final class EventHelper: NSObject {
         
         return "\(startTime):00-\(endTime):00"
     }
+    
+    public func setDateFormatter(date: Date) -> String {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        return dateFormatterGet.string(from: date)
+    }
+    
+    public func getHour(date: Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(date))
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "HH"
+
+        return dateFormatterGet.string(from: date)
+    }
 }

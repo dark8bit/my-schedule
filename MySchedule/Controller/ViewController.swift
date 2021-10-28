@@ -16,11 +16,6 @@ class ViewController: UIViewController {
             tableView.isHidden = true
         }
     }
-    @IBOutlet var plusButton: UIButton! {
-        didSet {
-            plusButton.layer.cornerRadius = plusButton.bounds.width / 2
-        }
-    }
     
     @IBOutlet var infoView: UIView! {
         didSet {
@@ -30,7 +25,7 @@ class ViewController: UIViewController {
     
     var isSelectedDate: Bool = true
 
-    lazy var realm:Realm = {
+    lazy var realm: Realm = {
         Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: 6, migrationBlock: nil)
         return try! Realm()
     }()
@@ -39,7 +34,7 @@ class ViewController: UIViewController {
     
     var events: Results<Event>!
     var eventsOfSelectedDay: [Event] = [Event]()
-    var eventCell = Array(repeating: Event(id: "",
+    var eventCell = Array(repeating: Event(id: "0",
                                           name: "",
                                            descriptionEvent: "", date_start: 0,
                                            date_finish: 0), count: 24)
@@ -54,6 +49,7 @@ class ViewController: UIViewController {
         tableView.separatorStyle = .none
 
         events = realm.objects(Event.self)
+        print(realm.configuration.fileURL!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,7 +75,7 @@ class ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    private func reloadData() {
+    public func reloadData() {
         calendar.reloadData()
         tableView.reloadData()
     }

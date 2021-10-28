@@ -29,10 +29,10 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiH-b9-4YY">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <rect key="frame" x="87" y="438" width="240" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите дату:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-3p-Uqi">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -43,6 +43,7 @@
                                     <constraint firstAttribute="bottom" secondItem="rap-3p-Uqi" secondAttribute="bottom" id="28E-S3-AN7"/>
                                     <constraint firstAttribute="trailing" secondItem="rap-3p-Uqi" secondAttribute="trailing" id="RQ8-7m-PpY"/>
                                     <constraint firstItem="rap-3p-Uqi" firstAttribute="leading" secondItem="kiH-b9-4YY" secondAttribute="leading" id="TG8-fu-V3N"/>
+                                    <constraint firstAttribute="height" constant="120" id="nxN-Ri-Q7F"/>
                                     <constraint firstItem="rap-3p-Uqi" firstAttribute="top" secondItem="kiH-b9-4YY" secondAttribute="top" id="vm8-xx-Rkt"/>
                                 </constraints>
                             </view>
@@ -63,7 +64,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-OF-xEk">
                                                             <rect key="frame" x="20" y="8" width="100" height="20.5"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="ich-c8-gZE"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ich-c8-gZE"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -122,14 +123,13 @@
                             <constraint firstItem="I0G-xC-fkU" firstAttribute="leading" secondItem="IRK-3i-M9v" secondAttribute="leading" id="1bp-aR-Uga"/>
                             <constraint firstItem="IRK-3i-M9v" firstAttribute="trailing" secondItem="kiH-b9-4YY" secondAttribute="trailing" constant="87" id="3bN-2B-mmR"/>
                             <constraint firstItem="I0G-xC-fkU" firstAttribute="trailing" secondItem="IRK-3i-M9v" secondAttribute="trailing" id="Fjt-dn-sJP"/>
-                            <constraint firstItem="IRK-3i-M9v" firstAttribute="bottom" secondItem="kiH-b9-4YY" secondAttribute="bottom" constant="350" id="Jkp-8Y-9hQ"/>
                             <constraint firstAttribute="bottom" secondItem="x3Q-dx-Bh5" secondAttribute="bottom" id="Mq7-Xi-kqb"/>
                             <constraint firstItem="kiH-b9-4YY" firstAttribute="leading" secondItem="IRK-3i-M9v" secondAttribute="leading" constant="87" id="S5M-Na-Upf"/>
                             <constraint firstItem="x3Q-dx-Bh5" firstAttribute="leading" secondItem="IRK-3i-M9v" secondAttribute="leading" id="a4q-dK-4Qd"/>
                             <constraint firstItem="x3Q-dx-Bh5" firstAttribute="trailing" secondItem="IRK-3i-M9v" secondAttribute="trailing" id="emq-8c-x0r"/>
                             <constraint firstItem="I0G-xC-fkU" firstAttribute="top" secondItem="IRK-3i-M9v" secondAttribute="top" id="jc6-w9-NMV"/>
                             <constraint firstItem="x3Q-dx-Bh5" firstAttribute="top" secondItem="I0G-xC-fkU" secondAttribute="bottom" id="skX-ti-F90"/>
-                            <constraint firstItem="kiH-b9-4YY" firstAttribute="top" secondItem="IRK-3i-M9v" secondAttribute="top" constant="296" id="yX9-aa-1cH"/>
+                            <constraint firstItem="kiH-b9-4YY" firstAttribute="top" secondItem="I0G-xC-fkU" secondAttribute="bottom" id="yX9-aa-1cH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Schelder" id="Dt5-uR-2sC"/>

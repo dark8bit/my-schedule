@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class EventDetailViewController: UIViewController {
-    @IBOutlet var editButton: UIBarButtonItem!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var descriptionTextView: UITextView!
     @IBOutlet var dateLabel: UILabel!

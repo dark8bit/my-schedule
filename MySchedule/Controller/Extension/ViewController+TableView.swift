@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 // MARK: UITableViewDelegeta, UITableViewDataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -16,7 +17,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "eventcell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EventViewCell
-        var event = Event()
+        var event = Event(id: "0", name: "", descriptionEvent: "", date_start: 0, date_finish: 0)
         
         eventsOfSelectedDay.forEach({
             let hourStart = eventHelper.getHour(date: $0.date_start)
@@ -44,5 +45,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        if self.eventCell[indexPath.row].id == "0" {
+            return nil
+        }
+
+        let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { action, sourceView, completionHandler in
+            
+            let findEvent = self.realm.objects(Event.self).filter("id = '\(self.eventCell[indexPath.row].id)'").first
+            
+            if let findEvent = findEvent {
+                try! self.realm.write {
+                    self.realm.delete(findEvent)
+                }
+
+                self.getEventsSelectDate()
+            }
+
+            completionHandler(true)
+        }
+        
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return swipeConfiguration
     }
 }

@@ -46,7 +46,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if self.eventCell[indexPath.row].id == "0" {
             return nil

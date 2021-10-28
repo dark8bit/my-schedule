@@ -38,7 +38,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
-
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default)
@@ -46,6 +45,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if self.eventCell[indexPath.row].id == "0" {
             return nil
